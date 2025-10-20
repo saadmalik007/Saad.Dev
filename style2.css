@@ -1,0 +1,128 @@
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ---------- HEADER / NAVBAR ---------- */
+.header {
+  background: #222;
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.heading h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ff9800;
+}
+
+/* ---------- SERVICES SECTION ---------- */
+.services {
+  padding: 3rem 10%;
+  background: #fff;
+}
+
+.services h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1rem;
+  border-left: 5px solid #ff9800;
+  padding-left: 10px;
+}
+
+.services p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.services ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.services ul li {
+  background: #f1f1f1;
+  margin: 0.7rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 5px solid #ff9800;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.services ul li:hover {
+  background: #ffedd5;
+  transform: translateX(5px);
+}
+
+/* Subheading for "Additional" */
+.services h3 {
+  margin-top: 2rem;
+  color: #ff5722;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ff9800;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ---------- RESPONSIVE NAV ---------- */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .navbar.active ul {
+    display: flex;
+  }
+
+  .navbar::after {
+    content: "☰";
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+}
